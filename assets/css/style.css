@@ -1,1 +1,96 @@
+* {
+    outline:1px solid black;
+}
+h1{
+    text-align: center;
+}
+aside{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+}
+main{
+    display: inline-block;
+    width: 80%;
+}
+.container>div{
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
 
+}
+.lfz-card{
+    background: url(../images/lfz-card.jpg) no-repeat ;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.card-back{
+    position: absolute;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+}
+.coke{
+    background: url(../images/coke2.png) no-repeat;
+    /* height: 100%; */
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.apple{
+    background: url(../images/apple.png) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.instagram{
+    background: url(../images/instagram.jpg) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.Lacoste{
+    background: url(../images/Lacoste.jpg) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.nike{
+    background: url(../images/nike.png) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.sprint{
+    background: url(../images/sprint.jpg) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.starbucks{
+    background: url(../images/starbucks.jpg) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.target{
+    background: url(../images/target.png) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.disney{
+    background: url(../images/disney2.png) no-repeat;
+    max-width:  100%;
+    background-position: center;
+    background-size: cover;
+}
+.hidden{ /*This selector must be placed at the bottom of the CSS document to ensure it will always apply!*/
+    display: none; 
+} 

@@ -1,0 +1,32 @@
+* {
+    outline:1px solid black;
+}
+h1{
+    text-align: center;
+}
+aside{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+}
+main{
+    display: inline-block;
+    width: 80%;
+}
+.container>div{
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    display: inline-block;
+
+}
+.lfz-card{
+    background: url(assets/images/lfz-card.jpg) no-repeat ;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.card:last-of-type {
+    background-color: yellow;
+}
