@@ -4,6 +4,7 @@ var secondCardClicked=null;
 var matches=null;
 var firstCardImage = null;
 var secondCardImage = null;
+var max_matches=9;
 
 function initializeApp(){
     $(".lfz-card").click(handleCardClick);
@@ -51,8 +52,15 @@ function handleCardClick(event){
       if(firstCardImage===secondCardImage){
         console.log("they matched");
         matches+=1;
-        firstCardClicked=null;
-        secondCardClicked=null;
+        if(matches===max_matches){
+          $(".modal").removeClass('hidden')
+          
+        //   $(".modal").show();
+        // }else{
+        //   $(".modal").hide
+        }
+      firstCardClicked=null;
+      secondCardClicked=null;
       }else{
         $(".lfz-card").off('click');
         setTimeout(function(){ 

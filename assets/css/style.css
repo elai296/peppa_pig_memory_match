@@ -91,6 +91,29 @@ main{
     background-position: center;
     background-size: cover;
 }
+.modal{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    border-radius: 50px; 
+    position: absolute;
+    z-index: 2;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    outline: 0px;
+}
+
+button{
+    position: absolute; 
+    margin: auto ;
+    height: 30%;
+    width: 50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+}
 .hidden{ /*This selector must be placed at the bottom of the CSS document to ensure it will always apply!*/
     display: none; 
 } 
