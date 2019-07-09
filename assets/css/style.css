@@ -1,21 +1,51 @@
 * {
-    outline:1px solid black;
+    /* outline:1px solid black; */
+}
+body{
+    background-color: white;
+    font-family: "Open sans";
+    background: url(../images/StockSnap_9YQBFH7PYQ.jpg) no-repeat ;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 h1{
     text-align: center;
+    background-color: black;
+    opacity:.5;
+    color: white;
+   
 }
 aside{
     width: 15%;
     display: inline-block;
     vertical-align: top;
+    color: white;
+    background-color: black;
+    opacity:.5;
+    /* background-color: lightblue; */
+}
+h5{
+    text-align: center;
+}
+#games-played{
+    text-align: center;
+}
+#attempts{
+    text-align: center;
+}
+#accuracy{
+    text-align: center;
 }
 main{
     display: inline-block;
     width: 80%;
+    height: 80%;
 }
 .container>div{
-    height: 150px;
-    width: 150px;
+    height: 10vw;
+    width: 15%;
     margin: 5px;
     display: inline-block;
     position: relative;
@@ -29,6 +59,9 @@ main{
     width: 100%;
     position: absolute;
     z-index: 1;
+}
+.lfz-card:hover{
+    background-color: gray;
 }
 .card-back{
     position: absolute;
@@ -52,6 +85,7 @@ main{
 .instagram{
     background: url(../images/instagram.jpg) no-repeat;
     max-width:  100%;
+    height: 100%;
     background-position: center;
     background-size: cover;
 }

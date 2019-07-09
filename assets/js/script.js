@@ -11,7 +11,9 @@ var accuracy=0;
 
 function initializeApp(){
     $(".lfz-card").click(handleCardClick);
+    $('.modal').on('click', 'button', resetStats);
     games_played+=1;
+    $(".modal").hide();
 }
 
 function handleCardClick(event){
@@ -31,11 +33,7 @@ function handleCardClick(event){
       matches+=1;
       
       if(matches===max_matches){
-        $(".modal").removeClass('hidden')
-        
-        //   $(".modal").show();
-        // }else{
-          //   $(".modal").hide
+        $(".modal").show();
         }
         firstCardClicked=null;
         secondCardClicked=null;
@@ -55,8 +53,12 @@ function handleCardClick(event){
   }
 
   function calculateAccuracy(){
+  
+    if(attempts===0){
+      return 0;
+    }
     accuracy = matches / attempts;
-    return accuracy;
+    return accuracy.toFixed(1);
   }
 
   function displayStats(){
@@ -64,4 +66,15 @@ function handleCardClick(event){
     $("#games-played").text(games_played);
     $("#attempts").text(attempts);
     $("#accuracy").text(resultAccuracy);
+  }
+
+  function resetStats(){
+    console.log('Reset Stats Called');
+    matches=0;
+    attempts=0;
+    games_played+=1;
+    
+    displayStats();
+    $(".lfz-card").removeClass('hidden');
+    $(".modal").hide();
   }
