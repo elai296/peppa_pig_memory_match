@@ -20,8 +20,8 @@ main{
     display: inline-block;
 
 }
-.lfz-card{
-    background: url(assets/images/lfz-card.jpg) no-repeat ;
+.pig-card{
+    background: url(assets/images/background.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -29,4 +29,9 @@ main{
 }
 .card:last-of-type {
     background-color: yellow;
+    /* background-size: contain; */
 }
+
+/* .card-back{
+    background-size: contain;
+} */

@@ -8,15 +8,51 @@ var max_matches=9;
 var attempts= 0;
 var games_played=0;
 var accuracy=0;
+var cardIndex=null;
 
 function initializeApp(){
-    $(".lfz-card").click(handleCardClick);
+  randomizeCards(backCardList);
+  createCards(backCardList);
+    $(".pig-card").click(handleCardClick);
     $('.modal').on('click', 'button', resetStats);
+    // $('.reset').on('click', resetGame);
     games_played+=1;
     $(".modal").hide();
+    $('<button>').click(resetGame);
+    var resetButton= $('<button>').text('reset').click(resetGame);
+    $('.reset').append(resetButton);
 }
 
-function handleCardClick(event){
+var backCardList=["pig1", "pig2", "pig3", "pig4", "pig5",
+"pig6","pig7","pig8","pig9", "pig1", "pig2", "pig3", "pig4", "pig5",
+"pig6","pig7","pig8","pig9"];
+function randomizeCards(cardArray){
+  var currentIndex=cardArray.length, temporaryValue, randomIndex;
+  
+  while(0!==currentIndex){
+    randomIndex=Math.floor(Math.random()*currentIndex);
+    currentIndex-=1;
+    temporaryValue=cardArray[currentIndex];
+    cardArray[currentIndex]=cardArray[randomIndex];
+    cardArray[randomIndex]=temporaryValue;
+  }
+  return cardArray;
+}
+
+
+function createCards(array){
+  for (var i = 0; i < array.length; i++){
+    var cardContainer=$('<div>').addClass("card");
+    var cardFront = $('<div>').addClass("pig-card");
+    var cardBack = $('<div>').addClass("card-back").addClass(array[i]);
+    cardContainer.append(cardFront, cardBack);
+    $('#card-container').append(cardContainer);
+
+  }
+
+}
+
+function handleCardClick(event){  
 
   if(firstCardClicked===null){ 
     firstCardClicked=$(event.currentTarget);
@@ -38,13 +74,13 @@ function handleCardClick(event){
         firstCardClicked=null;
         secondCardClicked=null;
       }else{
-        $(".lfz-card").off('click');
+        $(".pig-card").off('click');
         setTimeout(function(){ 
           $(firstCardClicked).removeClass("hidden");
           firstCardClicked=null;
           $(secondCardClicked).removeClass("hidden");
           secondCardClicked=null;
-          $(".lfz-card").click(handleCardClick);
+          $(".pig-card").click(handleCardClick);
         }, 1000);
         console.log("not matched");
       }
@@ -75,6 +111,12 @@ function handleCardClick(event){
     games_played+=1;
     
     displayStats();
-    $(".lfz-card").removeClass('hidden');
+    $(".pig-card").removeClass('hidden');
     $(".modal").hide();
+  }
+
+  function resetGame(){
+    $('#card-container').html('')
+    randomizeCards(backCardList);
+    createCards(backCardList);
   }
