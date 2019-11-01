@@ -1,1 +1,805 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: white;
+  font-family: "Open sans";
+  background: url(../images/background.jpg) no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  line-height: 100%;
+}
+h1 {
+  text-align: center;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+}
+header {
+  height: 15%;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin: auto;
+  
+}
+.stats {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  background-color: #bd7cef;
+  box-sizing: border-box;
+  padding-top: 4px;
+  text-align: center;
+  height: 100%;
+  font-size: 10px;
+  right: 45%;
+  font-size: 2rem;
+  /* background-color: lightblue; */
+}
+h5 {
+  text-align: center;
+}
+#games-played {
+  text-align: center;
+}
+#attempts {
+  text-align: center;
+}
+#accuracy {
+  text-align: center;
+}
+main {
+  display: block;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+}
 
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+.pig-card {
+  background: url(../images/frontPic.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  border-radius: 15px;
+}
+.pig1 {
+  background: url(../images/DaddyPig.png) no-repeat;
+  /* height: 100%; */
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig2 {
+  background: url(../images/EmilyPig.jpg) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig3 {
+  background: url(../images/kangarooPig.jpg) no-repeat;
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig4 {
+  background: url(../images/PigBeach.png) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig5 {
+  background: url(../images/george.png) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig6 {
+  background: url(../images/mummy-pig-related.png) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig7 {
+  background: url(../images/PonyPig.jpg) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig8 {
+  background: url(../images/rabbitPig.jpg) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig9 {
+  background: url(../images/ZebraPig.jpg) no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  /* background-color:white; */
+}
+.pig-card:hover {
+  background-color: gray;
+}
+.card-back {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+.logo {
+  background: url(../images/peppaLogo.png) no-repeat center;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  margin: auto;
+}
+
+.modal {
+  height: 75%;
+  width:  75%;
+  background: url(../images/modal2.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+  /* background-color: white; */
+  border: 2px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 0px;
+  padding: 10px;
+}
+.restartText{
+  vertical-align: middle;
+  top:50%;
+  position: relative;
+  transform: translate(0, -50%);
+}
+.aboutModal {
+  height: 260px;
+  width: 400px;
+  position: absolute;
+  z-index: 2;
+  background: url(../images/aboutPic2.jpg) no-repeat;
+  background-color: white;
+  border: 2px solid lightblue;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  outline: 0px;
+  padding: 10px;
+}
+.about{
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.aboutModal h2 {
+  color: black;
+  text-align: center;
+  font-size: 1em;
+}
+
+.aboutModal p {
+  color: black;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+#letsPlay {
+  width: 35%;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 2px solid hotpink;
+}
+.modal > div {
+  margin-left: 40px;
+}
+.modal h2 {
+  color: black;
+  text-align: center;
+}
+.restart {
+  text-align: center;
+  width: 50%;
+  margin: 10px auto;
+  
+}
+#restart {
+  width: 25%;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 1.25em;
+  border: 2px solid hotpink;
+}
+
+.hidden {
+  display: none;
+}
+.outerControl {
+  height: 100%;
+  width: 45%;
+  padding-top: 6px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #bd7cef;
+}
+button {
+  margin: auto;
+  display: block;
+  width: 75%;
+}
+#stop {
+  display: inline-block;
+  width: 45%;
+  margin: auto;
+}
+
+#play {
+  display: inline-block;
+  width: 45%;
+  margin: auto;
+}
+
+.innerControl {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+}
+.audioControls {
+  display: flex;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.balloon1 {
+  background-image: url(../images/balloon-transparentgif-5.gif);
+  height: 228px;
+  width: 135px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  transform-origin: 0% 100%;
+  top: 100%;
+  left: 10px;
+}
+
+.balloon2 {
+  background-image: url(../images/balloon-transparentgif-5.gif);
+  height: 228px;
+  width: 135px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  transform-origin: 0% 100%;
+  top: 110%;
+  right: 10px;
+}
+
+.dancingPigWins {
+  background: url(../images/dancingPig.gif) no-repeat;
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+button,
+.outerControl,
+.stats {
+  border: 2px solid #ac68ee;
+  border-radius: 25px;
+}
+.shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: -10px;
+  z-index: 2;
+}
+
+@media screen and (orientation: landscape) {
+  .card {
+    height: 30%;
+    width: 16%;
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    border-radius: 15px;
+  }
+  header{
+    height: 13%;
+  }
+  main{
+    height: 65%;
+  }
+  footer {
+    font-size: 1.25vh;
+    height: 20%;
+  }
+  .stats{
+    padding-top: 1px;
+    font-size: .75rem;
+    line-height: .9rem;
+  }
+  .outerControl{
+    padding-top: 1px;
+    font-size: .75rem;
+    line-height: .75rem;
+  }
+  .aboutModal .about{
+    width: 70%;
+  }
+
+  @media screen and (min-width: 568px){
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: .70em;
+      right: 10.5px;
+    }
+    .modal h2{
+      font-size: 2em;
+    }
+  }
+  @media screen and (min-width: 640px){
+    .outerControl{
+      padding-top: 6.5px;
+    }
+    .stats{
+      padding-top: 5px;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    #letsPlay{
+      font-size: .75em;
+    }
+  
+  }
+  @media screen and (min-width: 667px) {
+    .stats,.outerControl{
+      line-height: 1rem;
+      font-size: .75rem;
+      padding-top: 0;
+    }
+    .restartText{
+      font-size: .75em;
+      right: 10px;
+    }
+    .modal h2{
+      font-size: 2em;
+    }
+  }
+  @media screen and (min-width: 731px){
+    .outerControl{
+      padding-top: 6.5px;
+    }
+    .stats{
+      padding-top: 7px;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+  }
+  @media screen and (min-width: 736px) {
+    .stats,.outerControl{
+      line-height: 1rem;
+      font-size: 1.5rem;
+    }
+    .stats{
+      line-height: 1rem;
+    }
+    .restartText{
+      font-size: .75em;
+      right: 15px;
+    }
+
+  }
+  @media screen and (min-width: 812px){
+    .stats,.outerControl{
+      font-size: 3em;
+      line-height: 1.25em;
+      padding-top: 0px;
+    }
+    .stats{
+      line-height: 1.3em;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: .5em;
+      line-height: 1.5em;
+      right: 15px;
+    }
+    .restart{
+      font-size: 1.5em;
+      margin: 25px auto;
+    }
+    #restart{
+      font-size: 1.5em;
+    }
+    .modal h2{
+      font-size: 2.5em;
+    }
+  }
+ 
+  @media screen and (min-width: 1024px){ 
+    .stats,.outerControl{
+      padding-top: 5px;
+      line-height: 2.5rem;
+      font-size: 2rem;
+    }
+    .stats{
+      line-height: 2rem;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .modal{
+      font-size: 1.75em;
+      line-height: 1.5em;
+    }
+    h2{
+      font-size: 1.5em;
+    }
+  }
+
+  @media screen and (min-width: 1331px){
+    .stats{
+      font-size: 3em;
+    }
+    .outerControl{
+      font-size: 3em;
+      padding-top: 0;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: auto;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (min-width: 1366px){ 
+    main{
+      height: 70%;
+    }  
+    footer{
+      height:15%;
+    }
+    .stats{
+      line-height: 2.1rem;
+    }
+    .modal{
+      font-size: 3em;
+      line-height: 2em;
+    }
+    .restart{
+      font-size: 1em;
+      line-height: 1.5em;
+      right: 15px;
+    }
+    h2{
+      font-size: 2em;
+    }
+    .aboutModal{
+      height: 50%;
+      width: 50%;
+      font-size: 2em;
+      line-height: 1em;
+    }
+  }
+}
+@media screen and (orientation: portrait) {
+  .card {
+    height: 15%;
+    width: 32%;
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    border-radius: 15px;
+  }
+  footer {
+    font-size: 1.15vh;
+    height: 11%;
+  }
+  main{
+      height: 73%;
+  }
+  .aboutModal{
+    width: 90%;
+  }
+  
+  .aboutModal .about{
+    width: 70%;
+  }
+  @media screen and (min-height: 568px){
+    .stats{
+      line-height: 1em;
+      font-size: 2em;
+    }
+  .outerControl{
+    padding-top: 0;
+    font-size: 1.75em;
+    line-height: 1em;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: .5em;
+      right: 15px;
+      line-height: 1em;
+    }
+    .modal h2{
+      font-size: 1em;
+
+    }
+    #restart{
+      font-size: .7em;
+    }
+    #letsPlay{
+      font-size: .5em;
+    }
+    .aboutModal{
+      height: 35%;
+    }
+  }
+  @media screen and (min-height: 640px){
+    .outerControl{
+      padding-top: 5px;
+    }
+    #letsPlay{
+      font-size: .75em;
+    }
+  }
+
+   @media screen and (min-height: 667px){
+    .stats{
+      line-height: 1em;
+      font-size: 2em;
+    }
+    .outerControl{
+      font-size: 1.75em;
+      line-height: 1em;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: 1em;
+      right: 10px;
+    }
+    .modal h2{
+      font-size: 1em;
+    }
+    .restart{
+      font-size: .75em;
+    }
+    #restart{
+      font-size: .75em;
+    }
+    #letsPlay{
+      font-size: .5em;
+    }
+  }
+  @media screen and (min-height: 731px){
+    .outerControl{
+      padding-top: 8px;
+    }
+  }
+  @media screen and (min-height: 736px){
+    .stats{
+      line-height: 1em;
+      font-size: 1.5em;
+      padding-top: 9px;
+    }
+    .outerControl {
+      font-size: 1.5em;
+      line-height: 1em;
+    }
+    .restartText{
+      font-size: .90em;
+      right: 10px;
+    }
+    .modal h2{
+      font-size: 1.5em;
+    }
+
+  }
+  @media screen and (min-height: 812px){
+    .stats{
+      font-size: 1.5em;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: .5em;
+      line-height: 1.25em;
+      right: 15px;
+      bottom: 30px;
+    }
+
+    .modal h2{
+      font-size: 2em;
+     }
+     #letsPlay{
+       font-size: .5em;
+     }
+  }
+  @media screen and (min-height: 823px){
+    .stats{
+      line-height: 1.25em;
+      font-size: 1.75em;
+      padding-top: 0;
+    }
+    .outerControl{
+      font-size: 1.75em;
+      padding-top: 9px;
+    }
+  }
+  @media screen and (min-height: 1024px){
+    .stats{
+      line-height: 1em; 
+      font-size: 2em;
+    }
+    .outerControl{
+      font-size: 2em;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .restartText{
+      font-size: 1.5em;
+      right: 10px;
+      line-height: 1em;
+    }
+    .modal h2{
+      font-size: 2em;
+    }
+    #letsPlay{
+      font-size: 1em;
+    }
+    .aboutModal{
+      width: 60%;
+    }
+  }
+  @media screen and (min-height: 1366px){
+    .stats{
+      line-height: 1em; 
+      font-size: 2em;
+    }
+    .outerControl{
+      font-size: 2em;
+      line-height: 1em;
+      padding-top: 14px;
+    }
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      z-index: 2;
+    }
+    .modal{
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+    .modal h2{
+      font-size: 1em;
+    }
+    .restart{
+      margin: 25px auto;
+      font-size: 1em;
+      line-height: 1.25em;
+    }
+    .aboutModal{
+      width: 75%;
+      height: 35%;
+      font-size:2.5em;
+      line-height: normal;
+    }
+    .aboutModal .about{
+      width: 70%;
+    }
+    #letsPlay{
+      font-size: .75em;
+      border-radius: 20px;
+    }
+  }
+} 
