@@ -20,7 +20,7 @@ function initializeApp(){
   displayStats();
   displayControls();
   $('.aboutModal').on('click', 'button', hideModal);
-  // $('<button>').text("test").click(()=>balloonAnimation()).appendTo('header');
+  $('<button>').text('test').click(()=>youWon()).appendTo('header');
   $('.dancingPigWins').hide();
   $('.shadow').hide();
 }
@@ -42,21 +42,6 @@ function randomizeCards(cardArray){
   return cardArray;
 }
 
-
-// function createCards(array){
-//   for (var i = 0; i < 3; i++){
-//     var row = $('<div>').addClass('rows')
-//     for (var j = 0; j < 6; j++){
-//       var k = i * 6 + j;
-//       var cardContainer=$('<div>').addClass("card");
-//       var cardFront = $('<div>').addClass("pig-card");
-//       var cardBack = $('<div>').addClass("card-back").addClass(array[k]);
-//       cardContainer.append(cardFront, cardBack);
-//       row.append(cardContainer);
-//     }
-//     $('#card-container').append(row);
-//   }
-// }
 function createCards(array){
   for (var i = 0; i < array.length; i++){
       var cardContainer=$('<div>').addClass("card");
@@ -84,7 +69,6 @@ function handleCardClick(event){
       matches+=1;
       balloonAnimation();
       dancingPigWins();
-      // dancingPigWins();
       if(matches===max_matches){
           youWon();
         }
@@ -121,7 +105,7 @@ function displayStats(){
   var gamePlayed= $('<div>').attr("id", "games-played").text('Games Played: '+games_played);
   var attempt= $('<div>').attr("id", "attempts").text('Attempts: '+attempts);
   var result= $('<div>').text('Result').attr("id", "accuracy").text('Accuracy: '+resultAccuracy);
-  $('.stats').text('STATS').append(gamePlayed).append(attempt).append(result);
+  $('.stats').html('<strong>STATS</strong>').append(gamePlayed).append(attempt).append(result);
 }
 
 function displayControls(){
@@ -188,26 +172,7 @@ function balloonAnimation(){
       top: '-600'
     },6000);
   }
-  // $('.balloon1, .balloon2').animate({
-  //   top: '-600'
-  // },6000);
 }
-
-// function balloonAnimation(){
-//   var top =$('.balloon1').position().top;
-//   console.log(top)
-//   if(top == -300){
-//     $('.balloon1, .balloon2').css('top',600);
-//     $('.balloon1, .balloon2').animate({
-//       top: '-300'
-//     },6000);
-//   }
-//   if(top ==600){
-//     $('.balloon1, .balloon2').animate({
-//       top: '-300'
-//     },6000);
-//   }
-// }
 
 function dancingPigWins(){
   $('.dancingPigWins').fadeIn();
