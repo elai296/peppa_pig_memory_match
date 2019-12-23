@@ -9,11 +9,14 @@ Direction: Simply click on the card to reveal the character, and match all to wi
 ## Getting Started
 
 1. Fork and clone from this repository onto your local machine
-$ git clone https://github.com/[user_name]/peanut-gallery.git
+```
+$ git clone https://github.com/elai296/peppa-pig-memory-match.git
+```
 2. Open the index.html file located in the new folder
 3. Game is ready to be played.
 
-##Contributing
+## Contributing
+
 Please feel free to fork from this repository, make pull requests and help improve the game by sending suggestions to elainep926@gmail.com
 
 ## Built With
