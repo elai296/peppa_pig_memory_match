@@ -36,6 +36,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-top: .3rem;
+  padding-bottom: .4rem;
 }
 h5 {
   text-align: center;
