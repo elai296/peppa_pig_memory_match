@@ -10,7 +10,7 @@ Direction: Simply click on the card to reveal the character, and match all to wi
 
 1. Fork and clone from this repository onto your local machine
 ```
-$ git clone https://github.com/elai296/peppa-pig-memory-match.git
+$ git clone https://github.com/[user_name]/peppa-pig-memory-match.git
 ```
 2. Open the index.html file located in the new folder
 
