@@ -6,7 +6,7 @@ Direction: Simply click on the card to reveal the character, and match all to wi
 ![](./assets/images/PeppaPig.gif)
 
 
-##Getting Started
+## Getting Started
 
 1. Fork and clone from this repository onto your local machine
 $ git clone https://github.com/[user_name]/peanut-gallery.git
@@ -16,14 +16,18 @@ $ git clone https://github.com/[user_name]/peanut-gallery.git
 ##Contributing
 Please feel free to fork from this repository, make pull requests and help improve the game by sending suggestions to elainep926@gmail.com
 
-##Built With
+## Built With
+
 JavaScript
+
 jQuery
+
 HTML5
+
 CSS3
 
 
-##License
+## License
 
 This project is licensed under the MIT License - see the below for details.
 <a href="https://opensource.org/licenses/mit-license.php">MIT License</a>
