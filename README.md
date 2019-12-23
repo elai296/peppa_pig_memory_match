@@ -16,7 +16,7 @@ Navigate to, and open the gotMatch directory.
 Open the index.html and emjoy!
 
 Contributing
-Please feel free to fork this repo, make changes, submit pull requests, and send suggestions to jaehuh86@yahoo.com to make this app better.
+Please feel free to fork this repo, make changes, submit pull requests, and send suggestions to elainep926@gmail.com to make this app better.
 
 Built With
 JavaScript
