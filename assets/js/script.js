@@ -20,7 +20,6 @@ function initializeApp(){
   displayStats();
   displayControls();
   $('.aboutModal').on('click', 'button', hideModal);
-  $('<button>').text('test').click(()=>youWon()).appendTo('header');
   $('.dancingPigWins').hide();
   $('.shadow').hide();
 }
@@ -105,7 +104,8 @@ function displayStats(){
   var gamePlayed= $('<div>').attr("id", "games-played").text('Games Played: '+games_played);
   var attempt= $('<div>').attr("id", "attempts").text('Attempts: '+attempts);
   var result= $('<div>').text('Result').attr("id", "accuracy").text('Accuracy: '+resultAccuracy);
-  $('.stats').html('<strong>STATS</strong>').append(gamePlayed).append(attempt).append(result);
+  var statsTitle = $('<div>').html('<strong>STATS</strong>').attr('id','stats-title');
+  $('.stats').html(statsTitle).append(gamePlayed).append(attempt).append(result);
 }
 
 function displayControls(){
@@ -160,18 +160,11 @@ function aboutModal(){
 }
 function balloonAnimation(){
   var top =$('body').parent().height();
-  console.log(top);
-  if($('.balloon1').position().top < 0 ){
-    $('.balloon1').css('top',top);
-    $('.balloon2').css('top',top+50);
-    $('.balloon1, .balloon2').animate({
-      top: '-600'
-    },6000);
-  } else  {
-    $('.balloon1, .balloon2').animate({
-      top: '-600'
-    },6000);
-  }
+  $('.balloon1, .balloon2').stop();
+  $('.balloon1').css('top',top);
+  $('.balloon2').css('top',top+50);
+  $('.balloon1, .balloon2').animate({
+    top: '-600'},6000);
 }
 
 function dancingPigWins(){
