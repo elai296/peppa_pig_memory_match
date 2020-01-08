@@ -22,6 +22,7 @@ function initializeApp(){
   $('.aboutModal').on('click', 'button', hideModal);
   $('.dancingPigWins').hide();
   $('.shadow').hide();
+  $('#stop').hide();
 }
 
 var backCardList=["pig1", "pig2", "pig3", "pig4", "pig5",
@@ -142,11 +143,17 @@ function resetGame(){
 function play_audio(me){
   var myAudio = document.getElementById('backgroundMusic');
   var click = me.currentTarget.innerText; 
+  var play = document.getElementById('#play');
+  var pause = document.getElementById('#stop');
   if(click=='Play'){
     myAudio.play();
+    $('#stop').show();
+    $('#play').hide();
   }
   if(click=='Stop'){
     myAudio.pause();
+    $('#play').show();
+    $('#stop').hide();
   }
 }
 function aboutModal(){
