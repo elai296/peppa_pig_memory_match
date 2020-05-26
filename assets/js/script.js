@@ -1,14 +1,14 @@
 $(document).ready(initializeApp);
-var firstCardClicked=null;
-var secondCardClicked=null;
-var matches=null;
-var firstCardImage = null;
-var secondCardImage = null;
-var max_matches=9;
-var attempts= 0;
-var games_played=0;
-var accuracy=0;
-var cardIndex=null;
+let firstCardClicked=null;
+let secondCardClicked=null;
+let matches=null;
+let firstCardImage = null;
+let secondCardImage = null;
+let max_matches=9;
+let attempts= 0;
+let games_played=0;
+let accuracy=0;
+let cardIndex=null;
 
 function initializeApp(){
   randomizeCards(backCardList);
@@ -25,12 +25,12 @@ function initializeApp(){
   $('#stop').hide();
 }
 
-var backCardList=["pig1", "pig2", "pig3", "pig4", "pig5",
+const backCardList=["pig1", "pig2", "pig3", "pig4", "pig5",
 "pig6","pig7","pig8","pig9", "pig1", "pig2", "pig3", "pig4", "pig5",
 "pig6","pig7","pig8","pig9"];
 
 function randomizeCards(cardArray){
-  var currentIndex=cardArray.length, temporaryValue, randomIndex;
+  let currentIndex=cardArray.length, temporaryValue, randomIndex;
   
   while(0!==currentIndex){
     randomIndex=Math.floor(Math.random()*currentIndex);
@@ -43,10 +43,10 @@ function randomizeCards(cardArray){
 }
 
 function createCards(array){
-  for (var i = 0; i < array.length; i++){
-      var cardContainer=$('<div>').addClass("card");
-      var cardFront = $('<div>').addClass("pig-card");
-      var cardBack = $('<div>').addClass("card-back").addClass(array[i]);
+  for (let i = 0; i < array.length; i++){
+      let cardContainer=$('<div>').addClass("card");
+      let cardFront = $('<div>').addClass("pig-card");
+      let cardBack = $('<div>').addClass("card-back").addClass(array[i]);
       cardContainer.append(cardFront, cardBack);
     $('#card-container').append(cardContainer);
   }
@@ -101,22 +101,22 @@ function calculateAccuracy(){
 }
 
 function displayStats(){
-  var resultAccuracy=calculateAccuracy();
-  var gamePlayed= $('<div>').attr("id", "games-played").text('Games Played: '+games_played);
-  var attempt= $('<div>').attr("id", "attempts").text('Attempts: '+attempts);
-  var result= $('<div>').text('Result').attr("id", "accuracy").text('Accuracy: '+resultAccuracy);
-  var statsTitle = $('<div>').html('<strong>STATS</strong>').attr('id','stats-title');
+  let resultAccuracy=calculateAccuracy();
+  let gamePlayed= $('<div>').attr("id", "games-played").text('Games Played: '+games_played);
+  let attempt= $('<div>').attr("id", "attempts").text('Attempts: '+attempts);
+  let result= $('<div>').text('Result').attr("id", "accuracy").text('Accuracy: '+resultAccuracy);
+  let statsTitle = $('<div>').html('<strong>STATS</strong>').attr('id','stats-title');
   $('.stats').html(statsTitle).append(gamePlayed).append(attempt).append(result);
 }
 
 function displayControls(){
-  var resetButton= $('<button>').attr("id", "reset").text('Reset').click(resetGame);
-  var playButton= $('<button>').attr("id", "play").text('Play').click(play_audio);
-  var stopButton= $('<button>').attr("id", "stop").text('Stop').click(play_audio);
-  var aboutButton= $('<button>').attr("id", "about").text('About').click(aboutModal);
-  var audio = $('<audio>').attr('id','backgroundMusic');
-  var audioControls = $('<div>').addClass('audioControls').append(playButton).append(stopButton);
-  var innerControl=$('<innerControl>').append(resetButton).append(audio).append(audioControls).append(aboutButton);
+  let resetButton= $('<button>').attr("id", "reset").text('Reset').click(resetGame);
+  let playButton= $('<button>').attr("id", "play").text('Play').click(play_audio);
+  let stopButton= $('<button>').attr("id", "stop").text('Stop').click(play_audio);
+  let aboutButton= $('<button>').attr("id", "about").text('About').click(aboutModal);
+  let audio = $('<audio>').attr('id','backgroundMusic');
+  let audioControls = $('<div>').addClass('audioControls').append(playButton).append(stopButton);
+  let innerControl=$('<innerControl>').append(resetButton).append(audio).append(audioControls).append(aboutButton);
   $('<source>').attr({src:'./assets/sounds/bensound-buddy.mp3',type:'audio/mpeg'}).appendTo(audio);
   $('.outerControl').append(innerControl);
 }
@@ -141,10 +141,10 @@ function resetGame(){
 }
 
 function play_audio(me){
-  var myAudio = document.getElementById('backgroundMusic');
-  var click = me.currentTarget.innerText; 
-  var play = document.getElementById('#play');
-  var pause = document.getElementById('#stop');
+  let myAudio = document.getElementById('backgroundMusic');
+  let click = me.currentTarget.innerText; 
+  let play = document.getElementById('#play');
+  let pause = document.getElementById('#stop');
   if(click=='Play'){
     myAudio.play();
     $('#stop').show();
@@ -166,7 +166,7 @@ function aboutModal(){
     $('.shadow').hide();
 }
 function balloonAnimation(){
-  var top =$('body').parent().height();
+  let top =$('body').parent().height();
   $('.balloon1, .balloon2').stop();
   $('.balloon1').css('top',top);
   $('.balloon2').css('top',top+50);
